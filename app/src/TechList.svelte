@@ -3,4 +3,7 @@
   import MicroFrontend from "./MicroFrontend.svelte";
 </script>
 
-<MicroFrontend appId="__APP_TECH_LIST__" appHost={config.techListUrl} />
+<MicroFrontend
+  appId="__APP_TECH_LIST__"
+  appHost={config.techListUrl}
+  tag="react" />

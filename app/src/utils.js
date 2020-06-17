@@ -81,3 +81,9 @@ export function unmountApp(appId, target) {
     app.unmount(target);
   }
 }
+
+export function handleWindowKeydown(event) {
+  if (event.key === "t") {
+    document.body.classList.toggle("show-tags");
+  }
+}

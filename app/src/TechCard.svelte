@@ -7,4 +7,5 @@
 <MicroFrontend
   appId="__APP_TECH_CARD__"
   appHost={config.techCardUrl}
-  appProps={$routeStore.route.params} />
+  appProps={$routeStore.route.params}
+  tag="svelte" />

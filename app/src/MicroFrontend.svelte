@@ -6,6 +6,7 @@
   export let appId;
   export let appHost;
   export let appProps = {};
+  export let tag;
 
   let target;
   let error;
@@ -25,5 +26,5 @@
 {#if error}
   <MicroFrontendError {error} />
 {:else}
-  <main class="container" bind:this={target} />
+  <main class={`container ${tag}`} bind:this={target} />
 {/if}
