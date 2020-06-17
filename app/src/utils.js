@@ -25,6 +25,7 @@ export async function loadAssets(host) {
     cache[host] = true;
   } catch (error) {
     console.log(`failed to load assets from '${host}'`);
+    throw error;
   }
 }
 
@@ -65,4 +66,18 @@ function loadLink(href) {
 
 function isAlreadyLoaded(id) {
   return !!document.getElementById(id);
+}
+
+export function mountApp(appId, target, props) {
+  const app = window[appId];
+  if (app && typeof app.mount === "function") {
+    app.mount(target, props);
+  }
+}
+
+export function unmountApp(appId, target) {
+  const app = window[appId];
+  if (app && typeof app.unmount === "function") {
+    app.unmount(target);
+  }
 }

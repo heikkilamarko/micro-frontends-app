@@ -34,7 +34,10 @@
     <div class="card-body">
       <h5 class="card-title">404</h5>
       <p class="card-text">Not Found</p>
-      <button on:click={navigateHome} class="btn btn-primary btn-lg">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        on:click={navigateHome}>
         Go Home
       </button>
     </div>

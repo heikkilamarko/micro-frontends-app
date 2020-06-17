@@ -1,29 +1,29 @@
 <script>
-  import { loadAssets } from "./utils";
-
   import { onMount, onDestroy } from "svelte";
+  import { loadAssets, mountApp, unmountApp } from "./utils";
+  import MicroFrontendError from "./MicroFrontendError.svelte";
 
-  export let id;
-  export let host;
-  export let props = {};
+  export let appId;
+  export let appHost;
+  export let appProps = {};
 
-  let div;
+  let target;
+  let error;
 
-  onMount(() => {
-    loadAssets(host).then(() => {
-      const entry = window[id];
-      if (entry && typeof entry.mount === "function") {
-        entry.mount(div, props);
-      }
-    });
-  });
-
-  onDestroy(() => {
-    const entry = window[id];
-    if (entry && typeof entry.unmount === "function") {
-      entry.unmount(div);
+  onMount(async () => {
+    try {
+      await loadAssets(appHost);
+      mountApp(appId, target, appProps);
+    } catch (err) {
+      error = err;
     }
   });
+
+  onDestroy(() => unmountApp(appId, target));
 </script>
 
-<main class="container" bind:this={div} />
+{#if error}
+  <MicroFrontendError {error} />
+{:else}
+  <main class="container" bind:this={target} />
+{/if}
