@@ -21,6 +21,5 @@ a.Tech header {
 }
 
 a.Tech img {
-  flex: 1 0;
   object-fit: contain;
 }
