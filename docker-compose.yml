@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  app:
+    build: ./app
+    ports:
+      - 8000:80
+    networks:
+      - app-net
+
+  app-tech-list:
+    build: ./app-tech-list
+    ports:
+      - 8001:80
+    networks:
+      - app-net
+
+  app-tech-card:
+    build: ./app-tech-card
+    ports:
+      - 8002:80
+    networks:
+      - app-net
+
+  api:
+    build: ./api
+    image: app
+    ports:
+      - 8003:80
+    networks:
+      - app-net
+
+networks:
+  app-net:

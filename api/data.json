@@ -1,0 +1,32 @@
+{
+  "technologies": [
+    {
+      "id": "react",
+      "name": "React",
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "logo_url": "/images/react.svg",
+      "homepage_url": "https://reactjs.org/"
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "description": "Cybernetically enhanced web apps.",
+      "logo_url": "/images/svelte.svg",
+      "homepage_url": "https://svelte.dev/"
+    },
+    {
+      "id": "vue",
+      "name": "Vue",
+      "description": "A progressive, incrementally-adoptable framework for building UI on the web.",
+      "logo_url": "/images/vue.svg",
+      "homepage_url": "https://vuejs.org/"
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "description": "One framework. Mobile & desktop.",
+      "logo_url": "/images/angular.svg",
+      "homepage_url": "https://angular.io/"
+    }
+  ]
+}

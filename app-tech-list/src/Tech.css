@@ -1,0 +1,26 @@
+a.Tech {
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 2rem;
+  margin: 0.5rem;
+}
+a.Tech:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+a.Tech header {
+  flex: 1 0;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+a.Tech img {
+  flex: 1 0;
+  object-fit: contain;
+}
