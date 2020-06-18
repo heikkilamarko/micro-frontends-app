@@ -18,16 +18,18 @@ function Tech({ tech }) {
   }
 
   return (
-    <a className="Tech" onClick={handleClick} href={`/tech/${tech.id}`}>
-      <header>{tech.name}</header>
-      <img
-        className="logo"
-        src={`${config.apiUrl}/${tech.logo_url}`}
-        width="100"
-        height="100"
-        alt="logo"
-      />
-    </a>
+    <div className="col-12 col-md-6 col-lg-3 p-2">
+      <a className="Tech" onClick={handleClick} href={`/tech/${tech.id}`}>
+        <header>{tech.name}</header>
+        <img
+          className="logo"
+          src={`${config.apiUrl}/${tech.logo_url}`}
+          width="100"
+          height="100"
+          alt="logo"
+        />
+      </a>
+    </div>
   );
 }
 

@@ -7,7 +7,6 @@ a.Tech {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   padding: 2rem;
-  margin: 0.5rem;
 }
 a.Tech:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),

@@ -3,7 +3,6 @@ import axios from 'axios';
 import config from './config';
 import { alertError } from './utils';
 import Tech from './Tech';
-import './TechList.css';
 
 function TechList() {
   const [techList, setTechList] = useState([]);
@@ -28,7 +27,7 @@ function TechList() {
   }, []);
 
   return (
-    <div className="TechList">
+    <div className="row p-2">
       {techList.map((tech) => (
         <Tech key={tech.id} tech={tech} />
       ))}
