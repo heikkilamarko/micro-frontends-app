@@ -10,7 +10,7 @@ function Tech({ tech }) {
   }
 
   return (
-    <div className="col-12 col-md-6 col-lg-3 p-2">
+    <div className="col-6 col-md-4 col-lg-3 p-2">
       <a
         className="card text-center card-tech"
         onClick={handleClick}
