@@ -15,3 +15,7 @@ export function alertError(error) {
 
   alert(message);
 }
+
+export function navigate(to, params = {}) {
+  window.dispatchEvent(new CustomEvent('app.nav', { detail: { to, params } }));
+}
