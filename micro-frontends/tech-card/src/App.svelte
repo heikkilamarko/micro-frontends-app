@@ -3,6 +3,7 @@
   import axios from "axios";
   import config from "./config";
   import { alertError } from "./utils";
+  import TechCard from "./TechCard.svelte";
 
   export let id;
 
@@ -33,32 +34,10 @@
     justify-content: center;
     padding: 1rem;
   }
-
-  .card {
-    width: 30rem;
-  }
-
-  img {
-    align-self: center;
-    padding: 1rem;
-    height: 20rem;
-  }
 </style>
 
-<section>
-  {#if tech}
-    <div class="card">
-      <img
-        src={`${config.apiUrl}/${tech.logo_url}`}
-        class="card-img-top"
-        alt="logo" />
-      <div class="card-body">
-        <h4 class="card-title">{tech.name}</h4>
-        <p class="card-text">{tech.description}</p>
-        <a href={tech.homepage_url} target="_blank" class="btn btn-primary">
-          Homepage
-        </a>
-      </div>
-    </div>
-  {/if}
-</section>
+{#if tech}
+  <section>
+    <TechCard {tech} />
+  </section>
+{/if}

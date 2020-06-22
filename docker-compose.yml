@@ -2,21 +2,21 @@ version: "3.7"
 
 services:
   app:
-    build: ./app
+    build: ./app-shell
     ports:
       - 8000:80
     networks:
       - app-net
 
-  app-tech-list:
-    build: ./app-tech-list
+  micro-frontend-tech-list:
+    build: ./micro-frontends/tech-list
     ports:
       - 8001:80
     networks:
       - app-net
 
-  app-tech-card:
-    build: ./app-tech-card
+  micro-frontend-tech-card:
+    build: ./micro-frontends/tech-card
     ports:
       - 8002:80
     networks:
