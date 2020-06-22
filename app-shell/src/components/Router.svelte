@@ -1,8 +1,8 @@
 <script>
-  import routeStore from "./routeStore";
+  import routeStore from "../routeStore";
   import TechList from "./TechList.svelte";
   import TechCard from "./TechCard.svelte";
-  import NotFound from "./NotFound.svelte";
+  import ErrorMessage from "./ErrorMessage.svelte";
 
   $: route = $routeStore.route.name;
 </script>
@@ -12,5 +12,5 @@
 {:else if route === 'tech'}
   <TechCard />
 {:else}
-  <NotFound />
+  <ErrorMessage title="404" text="Not Found" showGoHome={true} />
 {/if}

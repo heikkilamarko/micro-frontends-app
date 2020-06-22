@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from './config';
+import config from '../config';
 import Tech from './Tech';
-import Error from './Error';
+import ErrorMessage from './ErrorMessage';
 
 function TechList() {
   const [techList, setTechList] = useState([]);
@@ -29,7 +29,7 @@ function TechList() {
 
   return (
     <>
-      {!!error && <Error error={error} />}
+      {!!error && <ErrorMessage text={error.message} />}
       {!error && (
         <div className="row p-2">
           {techList.map((tech) => (

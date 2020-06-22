@@ -1,5 +1,5 @@
 <script>
-  import config from "./config";
+  import config from "../config";
 
   export let tech;
 </script>

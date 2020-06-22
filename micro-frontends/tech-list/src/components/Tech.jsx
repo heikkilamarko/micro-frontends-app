@@ -1,12 +1,15 @@
 import React from 'react';
-import config from './config';
-import { navigate } from './utils';
+import config from '../config';
 import './Tech.css';
 
 function Tech({ tech }) {
   function handleClick(event) {
     event.preventDefault();
-    navigate('tech', { id: tech.id });
+    window.dispatchEvent(
+      new CustomEvent('app.nav', {
+        detail: { to: 'tech', params: { id: tech.id } },
+      }),
+    );
   }
 
   return (

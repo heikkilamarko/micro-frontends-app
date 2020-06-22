@@ -1,6 +1,6 @@
 <script>
-  import config from "./config";
-  import routeStore from "./routeStore";
+  import config from "../config";
+  import routeStore from "../routeStore";
   import MicroFrontend from "./MicroFrontend.svelte";
 </script>
 

@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { loadAssets, mountApp, unmountApp } from "./utils";
-  import MicroFrontendError from "./MicroFrontendError.svelte";
+  import { loadAssets, mountApp, unmountApp } from "../utils";
+  import ErrorMessage from "./ErrorMessage.svelte";
 
   export let appId;
   export let appHost;
@@ -24,7 +24,7 @@
 </script>
 
 {#if error}
-  <MicroFrontendError {error} />
+  <ErrorMessage text={error.message} />
 {:else}
   <main class={`container ${tag}`} bind:this={target} />
 {/if}

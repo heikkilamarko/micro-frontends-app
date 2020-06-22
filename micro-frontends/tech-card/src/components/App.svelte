@@ -1,10 +1,9 @@
 <script>
   import { onMount } from "svelte";
   import axios from "axios";
-  import config from "./config";
+  import config from "../config";
   import TechCard from "./TechCard.svelte";
-  import NotFound from "./NotFound.svelte";
-  import Error from "./Error.svelte";
+  import ErrorMessage from "./ErrorMessage.svelte";
 
   export let id;
 
@@ -27,20 +26,11 @@
   });
 </script>
 
-<style>
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-</style>
-
-<section>
+<section class="d-flex align-items-center justify-content-center p-4">
   {#if error}
-    <Error {error} />
+    <ErrorMessage text={error.message} />
   {:else if notFound}
-    <NotFound />
+    <ErrorMessage title="404" text="Not Found" />
   {:else if tech}
     <TechCard {tech} />
   {/if}
