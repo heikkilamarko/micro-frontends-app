@@ -1,7 +1,7 @@
-export function alertError(error) {
+export function formatedError(error) {
   let message = 'Operation failed.';
 
-  const err = error.response.data.error;
+  const err = error?.response?.data?.error;
 
   if (err) {
     const { code = 'Bad Request', details } = err;
@@ -13,7 +13,7 @@ export function alertError(error) {
     }
   }
 
-  alert(message);
+  return message;
 }
 
 export function navigate(to, params = {}) {

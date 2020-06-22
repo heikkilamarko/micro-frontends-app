@@ -1,10 +1,10 @@
-export function alertError(error) {
-  let message = 'Operation failed.';
+export function formatedError(error) {
+  let message = "Operation failed.";
 
-  const err = error.response.data.error;
+  const err = error?.response?.data?.error;
 
   if (err) {
-    const { code = 'Bad Request', details } = err;
+    const { code = "Bad Request", details } = err;
 
     message = code;
 
@@ -13,5 +13,5 @@ export function alertError(error) {
     }
   }
 
-  alert(message);
+  return message;
 }

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from './config';
-import { alertError } from './utils';
 import Tech from './Tech';
+import Error from './Error';
 
 function TechList() {
   const [techList, setTechList] = useState([]);
+  const [error, setError] = useState();
 
   useEffect(() => {
     let cancel = false;
@@ -17,7 +18,7 @@ function TechList() {
           setTechList(data.technologies || []);
         }
       } catch (error) {
-        alertError(error);
+        setError(error);
       }
     }
 
@@ -27,11 +28,16 @@ function TechList() {
   }, []);
 
   return (
-    <div className="row p-2">
-      {techList.map((tech) => (
-        <Tech key={tech.id} tech={tech} />
-      ))}
-    </div>
+    <>
+      {!!error && <Error error={error} />}
+      {!error && (
+        <div className="row p-2">
+          {techList.map((tech) => (
+            <Tech key={tech.id} tech={tech} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 

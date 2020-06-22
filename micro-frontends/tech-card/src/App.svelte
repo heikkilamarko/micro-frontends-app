@@ -2,27 +2,27 @@
   import { onMount } from "svelte";
   import axios from "axios";
   import config from "./config";
-  import { alertError } from "./utils";
   import TechCard from "./TechCard.svelte";
+  import NotFound from "./NotFound.svelte";
+  import Error from "./Error.svelte";
 
   export let id;
 
   let tech;
+  let notFound = false;
+  let error;
 
   onMount(async () => {
     try {
       const { data } = await axios.get(`${config.apiUrl}/data.json`);
+
       tech = data.technologies.find((t) => t.id === id);
 
       if (!tech) {
-        window.dispatchEvent(
-          new CustomEvent("app.nav", {
-            detail: { to: "notfound", params: {} },
-          })
-        );
+        notFound = true;
       }
-    } catch (error) {
-      alertError(error);
+    } catch (err) {
+      error = err;
     }
   });
 </script>
@@ -36,8 +36,12 @@
   }
 </style>
 
-{#if tech}
-  <section>
+<section>
+  {#if error}
+    <Error {error} />
+  {:else if notFound}
+    <NotFound />
+  {:else if tech}
     <TechCard {tech} />
-  </section>
-{/if}
+  {/if}
+</section>
