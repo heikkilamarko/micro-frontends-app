@@ -1,5 +1,5 @@
 <script>
-  import routeStore from "../routeStore";
+  import routeStore from "../stores/routeStore";
   import Link from "./Link.svelte";
 
   function navigateHome(event) {

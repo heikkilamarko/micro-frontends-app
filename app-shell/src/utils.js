@@ -87,3 +87,5 @@ export function handleWindowKeydown(event) {
     document.body.classList.toggle("show-tags");
   }
 }
+
+export function noop() {}

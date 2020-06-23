@@ -6,8 +6,12 @@ function Tech({ tech }) {
   function handleClick(event) {
     event.preventDefault();
     window.dispatchEvent(
-      new CustomEvent('app.nav', {
-        detail: { to: 'tech', params: { id: tech.id } },
+      new CustomEvent('APP.EVENT', {
+        detail: {
+          type: 'APP_EVENT_NAVIGATE',
+          to: 'tech',
+          params: { id: tech.id },
+        },
       }),
     );
   }

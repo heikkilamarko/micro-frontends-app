@@ -1,5 +1,5 @@
 <script>
-  import routeStore from "../routeStore";
+  import routeStore from "../stores/routeStore";
   import TechList from "./TechList.svelte";
   import TechCard from "./TechCard.svelte";
   import ErrorMessage from "./ErrorMessage.svelte";

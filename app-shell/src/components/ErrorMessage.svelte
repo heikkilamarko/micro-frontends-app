@@ -1,5 +1,5 @@
 <script>
-  import routeStore from "../routeStore";
+  import routeStore from "../stores/routeStore";
 
   export let title = "Error";
   export let text;
