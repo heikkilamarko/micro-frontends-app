@@ -1,18 +1,23 @@
 import App from "./components/App.svelte";
 
-let app;
+const APP_ID = "__APP_TECH_CARD__";
 
 window.__APP_TECH_CARD__ = {
   mount: (container, props) => {
-    console.log("__APP_TECH_CARD__: MOUNT");
-    app = new App({
+    console.log(`MOUNT: ${APP_ID}`);
+
+    let app = new App({
       target: container,
       props,
     });
-  },
-  unmount: (_container) => {
-    console.log("__APP_TECH_CARD__: UNMOUNT");
-    app.$destroy();
+
+    return () => {
+      if (app) {
+        console.log(`UNMOUNT: ${APP_ID}`);
+        app.$destroy();
+        app = null;
+      }
+    };
   },
 };
 

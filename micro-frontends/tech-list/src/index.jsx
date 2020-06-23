@@ -2,19 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
-window.__APP_TECH_LIST__ = {
+const APP_ID = '__APP_TECH_LIST__';
+
+window[APP_ID] = {
   mount: (container) => {
-    console.log('__APP_TECH_LIST__: MOUNT');
+    console.log(`MOUNT: ${APP_ID}`);
+
     ReactDOM.render(
       <React.StrictMode>
         <App />
       </React.StrictMode>,
       container,
     );
-  },
-  unmount: (container) => {
-    console.log('__APP_TECH_LIST__: UNMOUNT');
-    ReactDOM.unmountComponentAtNode(container);
+
+    return () => {
+      console.log(`UNMOUNT: ${APP_ID}`);
+      ReactDOM.unmountComponentAtNode(container);
+    };
   },
 };
 

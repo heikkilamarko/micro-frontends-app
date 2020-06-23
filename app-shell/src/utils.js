@@ -71,15 +71,9 @@ function isAlreadyLoaded(id) {
 export function mountApp(appId, target, props) {
   const app = window[appId];
   if (app && typeof app.mount === "function") {
-    app.mount(target, props);
+    return app.mount(target, props);
   }
-}
-
-export function unmountApp(appId, target) {
-  const app = window[appId];
-  if (app && typeof app.unmount === "function") {
-    app.unmount(target);
-  }
+  throw new Error(`micro frontend with id '${appId}' was not found`);
 }
 
 export function handleWindowKeydown(event) {
