@@ -5,19 +5,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "immer": "^7.0.1",
-    "router5": "^8.0.1",
-    "router5-plugin-browser": "^8.0.1",
-    "svelte": "^3.21.0"
+    "axios": "0.19.2",
+    "immer": "7.0.4",
+    "router5": "8.0.1",
+    "router5-plugin-browser": "8.0.1",
+    "svelte": "3.23.2"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-svelte": "^1.2.0",
-    "@snowpack/plugin-webpack": "^1.2.0",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/svelte": "^3.0.0",
-    "jest": "^25.4.0",
-    "snowpack": "^2.5.0",
-    "webpack-assets-manifest": "^3.1.1"
+    "@snowpack/app-scripts-svelte": "1.2.0",
+    "@snowpack/plugin-webpack": "1.3.0",
+    "@testing-library/jest-dom": "5.10.1",
+    "@testing-library/svelte": "3.0.0",
+    "jest": "26.0.1",
+    "snowpack": "2.5.2",
+    "webpack-assets-manifest": "3.1.1"
   }
 }
