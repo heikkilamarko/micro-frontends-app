@@ -2,6 +2,8 @@
 
 Simple Micro Frontends Application with Svelte and React
 
+<img src="./doc/components.png" height="400" style="margin:1rem"><img>
+
 ## Build and Run the App
 
 ```bash
