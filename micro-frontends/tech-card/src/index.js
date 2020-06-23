@@ -22,6 +22,14 @@ window[APP_ID] = {
   },
 };
 
+if (import.meta.env.MODE === "development") {
+  window.onload = () => {
+    window[APP_ID].mount(document.body, {
+      id: "svelte",
+    });
+  };
+}
+
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
 // Learn more: https://www.snowpack.dev/#hot-module-replacement
 if (import.meta.hot) {
