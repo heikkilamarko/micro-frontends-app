@@ -1,6 +1,6 @@
 # Runtime
 
-FROM node:12.18.0-alpine AS runtime
+FROM node:12.18.1-alpine AS runtime
 
 COPY . /app
 
