@@ -1,8 +1,9 @@
 import App from "./components/App.svelte";
+import config from "./config";
 
-const APP_ID = "__APP_TECH_CARD__";
+const APP_ID = config.appId;
 
-window.__APP_TECH_CARD__ = {
+window[APP_ID] = {
   mount: (container, props) => {
     console.log(`MOUNT: ${APP_ID}`);
 

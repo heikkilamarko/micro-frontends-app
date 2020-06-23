@@ -4,6 +4,6 @@
 </script>
 
 <MicroFrontend
-  appId="__APP_TECH_LIST__"
+  appId={config.techListId}
   appHost={config.techListUrl}
   tag="react" />

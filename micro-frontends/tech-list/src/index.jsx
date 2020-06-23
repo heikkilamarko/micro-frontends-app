@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import config from './config';
 
-const APP_ID = '__APP_TECH_LIST__';
+const APP_ID = config.appId;
 
 window[APP_ID] = {
   mount: (container) => {
