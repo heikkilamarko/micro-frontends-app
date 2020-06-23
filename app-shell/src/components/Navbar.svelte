@@ -2,8 +2,7 @@
   import routeStore from "../stores/routeStore";
   import Link from "./Link.svelte";
 
-  function navigateHome(event) {
-    event.preventDefault();
+  function navigateHome() {
     routeStore.navigate("home");
   }
 </script>

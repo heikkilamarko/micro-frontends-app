@@ -3,6 +3,6 @@
   export let href;
 </script>
 
-<a class={clazz} on:click {href}>
+<a class={clazz} on:click|preventDefault {href}>
   <slot />
 </a>

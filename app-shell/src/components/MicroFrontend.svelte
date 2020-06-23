@@ -1,6 +1,6 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { loadAssets, mountApp, unmountApp, noop } from "../utils";
+  import { loadAssets, mountApp, noop } from "../utils";
   import ErrorMessage from "./ErrorMessage.svelte";
 
   export let appId;
@@ -11,18 +11,18 @@
   let target;
   let error;
 
-  let unmount = noop;
+  let unmountApp = noop;
 
   onMount(async () => {
     try {
       await loadAssets(appHost);
-      unmount = mountApp(appId, target, appProps);
+      unmountApp = mountApp(appId, target, appProps);
     } catch (err) {
       error = err;
     }
   });
 
-  onDestroy(() => unmount());
+  onDestroy(() => unmountApp());
 </script>
 
 {#if error}
