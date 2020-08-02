@@ -8,18 +8,16 @@
   },
   "dependencies": {
     "axios": "0.19.2",
-    "immer": "7.0.5",
+    "immer": "7.0.7",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-react": "1.2.0",
-    "@snowpack/plugin-webpack": "1.4.0",
-    "@testing-library/jest-dom": "5.11.0",
-    "@testing-library/react": "10.4.4",
-    "jest": "26.1.0",
+    "@snowpack/app-scripts-react": "1.8.2",
+    "@testing-library/jest-dom": "5.11.2",
+    "@testing-library/react": "10.4.7",
+    "jest": "26.2.2",
     "prettier": "2.0.5",
-    "snowpack": "2.6.4",
-    "webpack-assets-manifest": "3.1.1"
+    "snowpack": "2.7.5"
   }
 }
