@@ -1,11 +1,11 @@
 <script>
-  import config from "../config";
+  import { MF_DETAIL_ID, MF_DETAIL_URL } from "../config";
   import routeStore from "../stores/routeStore";
   import MicroFrontend from "./MicroFrontend.svelte";
 </script>
 
 <MicroFrontend
-  appId={config.techCardId}
-  appHost={config.techCardUrl}
+  appId={MF_DETAIL_ID}
+  appHost={MF_DETAIL_URL}
   appProps={$routeStore.route.params}
   tag="svelte" />

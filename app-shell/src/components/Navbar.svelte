@@ -3,7 +3,7 @@
   import Link from "./Link.svelte";
 
   function navigateHome() {
-    routeStore.navigate("home");
+    routeStore.navigate("browse");
   }
 </script>
 
@@ -13,9 +13,7 @@
   </Link>
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <Link clazz="nav-link" on:click={navigateHome} href="/">
-        Technologies
-      </Link>
+      <Link clazz="nav-link" on:click={navigateHome} href="/">Browse</Link>
     </li>
   </ul>
 </nav>

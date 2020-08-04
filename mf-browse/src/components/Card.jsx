@@ -1,16 +1,16 @@
 import React from 'react';
-import config from '../config';
-import './Tech.css';
+import { API_URL } from '../config';
+import './Card.css';
 
-function Tech({ tech }) {
+function Card({ data }) {
   function handleClick(event) {
     event.preventDefault();
     window.dispatchEvent(
       new CustomEvent('APP.EVENT', {
         detail: {
           type: 'APP_EVENT_NAVIGATE',
-          to: 'tech',
-          params: { id: tech.id },
+          to: 'detail',
+          params: { id: data.id },
         },
       }),
     );
@@ -19,14 +19,14 @@ function Tech({ tech }) {
   return (
     <div className="col-6 col-md-4 col-lg-3 p-2">
       <a
-        className="card text-center card-tech"
+        className="card text-center card-custom"
         onClick={handleClick}
-        href={`/tech/${tech.id}`}
+        href={`/items/${data.id}`}
       >
         <div className="card-body">
-          <h4 className="card-title">{tech.name}</h4>
+          <h4 className="card-title">{data.name}</h4>
           <img
-            src={`${config.apiUrl}/${tech.logo_url}`}
+            src={`${API_URL}/${data.logo_url}`}
             width="100"
             height="100"
             alt="logo"
@@ -37,4 +37,4 @@ function Tech({ tech }) {
   );
 }
 
-export default Tech;
+export default Card;

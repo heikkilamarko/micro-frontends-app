@@ -1,8 +1,8 @@
 import React from 'react';
-import TechList from './TechList';
+import Cards from './Cards';
 
 function App() {
-  return <TechList />;
+  return <Cards />;
 }
 
 export default App;

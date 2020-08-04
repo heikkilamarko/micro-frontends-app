@@ -1,7 +1,5 @@
 import App from "./components/App.svelte";
-import config from "./config";
-
-const APP_ID = config.appId;
+import { APP_ID } from "./config";
 
 window[APP_ID] = {
   mount: (container, props) => {

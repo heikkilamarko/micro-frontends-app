@@ -5,8 +5,8 @@ import browserPlugin from "router5-plugin-browser";
 import { noop } from "../utils";
 
 const ROUTES = [
-  { name: "home", path: "/" },
-  { name: "tech", path: "/tech/:id" },
+  { name: "browse", path: "/" },
+  { name: "detail", path: "/items/:id" },
   { name: "notfound", path: "/notfound" },
 ];
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from '../config';
-import Tech from './Tech';
+import { API_URL } from '../config';
+import Card from './Card';
 import ErrorMessage from './ErrorMessage';
 
-function TechList() {
-  const [techList, setTechList] = useState([]);
+function Cards() {
+  const [items, setItems] = useState([]);
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -13,9 +13,9 @@ function TechList() {
 
     async function run() {
       try {
-        const { data } = await axios.get(`${config.apiUrl}/data.json`);
+        const { data } = await axios.get(`${API_URL}/data.json`);
         if (!cancel) {
-          setTechList(data.technologies || []);
+          setItems(data.items || []);
         }
       } catch (error) {
         setError(error);
@@ -32,8 +32,8 @@ function TechList() {
       {!!error && <ErrorMessage text={error.message} />}
       {!error && (
         <div className="row p-2">
-          {techList.map((tech) => (
-            <Tech key={tech.id} tech={tech} />
+          {items.map((item) => (
+            <Card key={item.id} data={item} />
           ))}
         </div>
       )}
@@ -41,4 +41,4 @@ function TechList() {
   );
 }
 
-export default TechList;
+export default Cards;
