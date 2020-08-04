@@ -9,17 +9,17 @@ services:
     networks:
       - app-net
 
-  micro-frontends-tech-list:
-    build: ./micro-frontends/tech-list
-    image: micro-frontends-tech-list
+  micro-frontends-mf-browse:
+    build: ./mf-browse
+    image: micro-frontends-mf-browse
     ports:
       - 8001:80
     networks:
       - app-net
 
-  micro-frontends-tech-card:
-    build: ./micro-frontends/tech-card
-    image: micro-frontends-tech-card
+  micro-frontends-mf-detail:
+    build: ./mf-detail
+    image: micro-frontends-mf-detail
     ports:
       - 8002:80
     networks:

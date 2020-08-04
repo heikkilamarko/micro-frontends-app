@@ -1,1 +1,0 @@
-# Tech List Micro Frontend

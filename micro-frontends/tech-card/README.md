@@ -1,1 +1,0 @@
-# Tech Card Micro Frontend
