@@ -16,6 +16,6 @@
     "@testing-library/jest-dom": "5.11.2",
     "@testing-library/svelte": "3.0.0",
     "jest": "26.2.2",
-    "snowpack": "2.7.5"
+    "snowpack": "2.7.6"
   }
 }
