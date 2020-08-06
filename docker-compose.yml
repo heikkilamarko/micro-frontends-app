@@ -6,32 +6,21 @@ services:
     image: micro-frontends-app-shell
     ports:
       - 8000:80
-    networks:
-      - app-net
 
   micro-frontends-mf-browse:
     build: ./mf-browse
     image: micro-frontends-mf-browse
     ports:
       - 8001:80
-    networks:
-      - app-net
 
   micro-frontends-mf-detail:
     build: ./mf-detail
     image: micro-frontends-mf-detail
     ports:
       - 8002:80
-    networks:
-      - app-net
 
   micro-frontends-api:
     build: ./api
     image: micro-frontends-api
     ports:
       - 8003:80
-    networks:
-      - app-net
-
-networks:
-  app-net:
