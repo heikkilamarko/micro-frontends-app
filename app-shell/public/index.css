@@ -1,12 +1,16 @@
-body.show-tags.svelte,
-body.show-tags .svelte {
+body.show-tags.tag-app-shell,
+body.show-tags .tag-app-shell,
+body.show-tags.tag-mf-detail,
+body.show-tags .tag-mf-detail {
   border: 3px solid #ff3e00;
   position: relative;
 }
 
-body.show-tags.svelte::before,
-body.show-tags .svelte::before {
-  content: "Svelte";
+body.show-tags.tag-app-shell::before,
+body.show-tags .tag-app-shell::before,
+body.show-tags.tag-mf-detail::before,
+body.show-tags .tag-mf-detail::before {
+  content: "svelte";
   background-color: #ff3e00;
   top: 0;
   left: 0;
@@ -17,15 +21,25 @@ body.show-tags .svelte::before {
   font-weight: 700;
 }
 
-body.show-tags.react,
-body.show-tags .react {
+body.show-tags.tag-app-shell::before,
+body.show-tags .tag-app-shell::before {
+  content: "app-shell (svelte)";
+}
+
+body.show-tags.tag-mf-detail::before,
+body.show-tags .tag-mf-detail::before {
+  content: "mf-detail (svelte)";
+}
+
+body.show-tags.tag-mf-browse,
+body.show-tags .tag-mf-browse {
   border: 3px solid #61dafb;
   position: relative;
 }
 
-body.show-tags.react::before,
-body.show-tags .react::before {
-  content: "React";
+body.show-tags.tag-mf-browse::before,
+body.show-tags .tag-mf-browse::before {
+  content: "mf-browse (react)";
   background-color: #61dafb;
   top: 0;
   left: 0;

@@ -8,4 +8,4 @@
   appId={MF_DETAIL_ID}
   appHost={MF_DETAIL_URL}
   appProps={$routeStore.route.params}
-  tag="svelte" />
+  tag="tag-mf-detail" />
