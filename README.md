@@ -33,7 +33,7 @@ Simple Micro Frontends Application with Svelte and React
 
 Application shell and the micro frontends use [Bootstrap](https://getbootstrap.com/) for styling.
 
-## Cross-application communication
+## Cross-Application Communication
 
 Application shell and the micro frontends can communicate in a loosely coupled way by using the standard [Custom Events API](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events).
 
