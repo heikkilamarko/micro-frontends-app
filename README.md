@@ -2,27 +2,33 @@
 
 This repository contains an implementation of a simple micro frontends application written in Svelte and React.
 
-## Brief Intro to Micro Frontends
+## Brief Introduction to Micro Frontends
 
 - Micro frontends is similar thing on the frontend side, as microservices are on the backend side.
-- Instead of building big monolithic applications, we compose our applications from a set of **well-defined, loosely coupled components**. This brings in several advantages.
-  - Adopting micro frontends enables **easier team setup**, where each micro frontend is owned by a single cross-functional team.
-  - Each team can independently choose what frontend technologies and build tools they use. The possibility to use **multiple frontend technologies in same application** effectively prevents technology lock-in situation. It also makes applications more future-proof, allowing teams to more easily experiment with and migrate to new technologies.
-  - We get **independent updates**, so that if one part of the application requires changes, we only need to update the micro frontend that implement this functionality.
-  - As with microservices in backend side, a very important thing is to **identify micro frontends** in our frontend applications. Fortunately, exactly the same principles, such as **Domain Driven Desing (DDD)** apply to frontends too.
-  - Micro frontend patterns can also be very effective when we want to migrate an existing monolithic Single-Page Application (SPA) to a more modular architecture. We can utilize well-known patterns like **Strangler Pattern**, where we kill the monolith by eating it piece-by-piece, until there is nothing left from the original implementation.
-- Today, there exist several different approaches and patterns to implement micro frontends. **Decisions frameworks** like the one presented [here](https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513) can provide a good starting point for your applications.
-- Micro frontends approach has many advantages, but **it is no silver bullet**. It comes with its own challenges, such as operational and governance complexity, and possibly bigger payload sizes. The important thing is to **understand the trade-offs** to make an informed decision on what's best for your team.
+- Applications are composed of a set of well-defined, loosely coupled components.
+- We can identify micro frontends in our applications by applying principles, such as Domain Driven Desing (DDD).
+- Enables easier team setup, where each micro frontend is owned by a single cross-functional team.
+- Teams can more freely pick their technology stack.
+  - Prevents technology lock-in.
+  - Makes applications more future-proof, allowing teams to more easily experiment with and migrate to new technologies.
+- We get independent updates, so that if one part of the application changes, we only need to update the micro frontend(s) that implement the changed functionality.
+- Micro frontends patterns can be very effective when migrating an existing monolithic application to a more modular architecture.
+  - We can utilize Strangler Pattern to kill the monolith by eating it piece-by-piece, until there is nothing left from the original implementation.
+- There exist several approaches to implement micro frontends.
+  - Decisions frameworks like the one presented [here](https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513), can prove to be really useful in the early stages of a project.
+- Micro frontends is no silver bullet. It comes with its own challenges, such as operational and governance complexity, and possibly bigger payload sizes.
+- The important thing is to understand the trade-offs, and make an informed decision on whether to adopt micro frontends in your applications.
 
 ### Existing Libraries and Frameworks
 
-Here is a list of some existing libraries and frameworks for implementing micro frontends:
+There exist several libraries and frameworks for implementing micro frontends:
 
 - [single-spa](https://single-spa.js.org/)
 - [Frint](https://frint.js.org/)
 - [Luigi](https://luigi-project.io/)
+- ...
 
-Implementing a **custom solution** is also a perfectly viable option. It gives you the full flexibility to innovate and evolve your solution.
+Implementing a custom solution is also a perfectly viable option. It gives you the full flexibility to innovate and evolve your solution.
 
 The sample application in this repository implements a custom solution.
 
@@ -39,7 +45,7 @@ The sample application in this repository implements a custom solution.
 ### Application Shell (`app-shell`)
 
 - Gateway to the application.
-- Implements client-side routing.
+- Implements the top menu and client-side routing.
 - Loads (lazy), mounts, and unmounts micro frontends based on application state.
 - Technologies: [Svelte](https://svelte.dev/), [Immer](https://immerjs.github.io/immer/), [Router5](https://router5.js.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Snowpack](https://www.snowpack.dev/)
 
