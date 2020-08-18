@@ -4,14 +4,27 @@ This repository contains an implementation of a simple micro frontends applicati
 
 ## Brief Intro to Micro Frontends
 
-- Micro frontends is more or less the same thing on the frontend side, as microservices are on the backend side.
-- Instead of building huge monolithic applications, we compose our applications from a set of **well-defined, loosely coupled components**. This brings many advantages.
-- Adopting micro frontends enables **easier team setup**, where each micro frontend is owned by a single cross-functional team.
-- Each team can independently choose what frontend technologies and build tools they use. The possibility to use **multiple frontend technologies in same application** effectively prevents technology lock-in situation. It also makes applications more future-proof, allowing teams to more easily experiment and migrate to new technologies.
-- We also get **independent updates**, so that if one part of the application requires changes, we only need to update and deploy the micro frontend that implements the desired functionality. The rest of the application stays untouched.
-- As with microservices in the backend side, a very important thing is to **identify micro frontends** in our frontend applications. Fortunately, exactly the same principles, such as **Domain Driven Desing (DDD)** apply to frontends too.
-- Micro frontend methods can also be very effective when we want to migrate an existing monolithic single page application (SPA) to a more modular architecture. Here we usually utilize so called **Strangler Pattern**, where we kill the monolith by eating it piece-by-piece, until there are nothing left from the original implementation.
-- Micro frontends approach has many advantages, but **it is no silver bullet**. It also comes with its own challenges, such as operational and governance complexity, and possibly bigger payload sizes. The important thing is to **understand the trade-offs** to make an informed decision on what's best for you and your team.
+- Micro frontends is similar thing on the frontend side, as microservices are on the backend side.
+- Instead of building big monolithic applications, we compose our applications from a set of **well-defined, loosely coupled components**. This brings in several advantages.
+  - Adopting micro frontends enables **easier team setup**, where each micro frontend is owned by a single cross-functional team.
+  - Each team can independently choose what frontend technologies and build tools they use. The possibility to use **multiple frontend technologies in same application** effectively prevents technology lock-in situation. It also makes applications more future-proof, allowing teams to more easily experiment with and migrate to new technologies.
+  - We get **independent updates**, so that if one part of the application requires changes, we only need to update the micro frontend that implement this functionality.
+  - As with microservices in backend side, a very important thing is to **identify micro frontends** in our frontend applications. Fortunately, exactly the same principles, such as **Domain Driven Desing (DDD)** apply to frontends too.
+  - Micro frontend patterns can also be very effective when we want to migrate an existing monolithic Single-Page Application (SPA) to a more modular architecture. We can utilize well-known patterns like **Strangler Pattern**, where we kill the monolith by eating it piece-by-piece, until there is nothing left from the original implementation.
+- Today, there exist several different approaches and patterns to implement micro frontends. **Decisions frameworks** like the one presented [here](https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513) can provide a good starting point for your applications.
+- Micro frontends approach has many advantages, but **it is no silver bullet**. It comes with its own challenges, such as operational and governance complexity, and possibly bigger payload sizes. The important thing is to **understand the trade-offs** to make an informed decision on what's best for your team.
+
+### Existing Libraries and Frameworks
+
+Here is a list of some existing libraries and frameworks for implementing micro frontends:
+
+- [single-spa](https://single-spa.js.org/)
+- [Frint](https://frint.js.org/)
+- [Luigi](https://luigi-project.io/)
+
+Implementing a **custom solution** is also a perfectly viable option. It gives you the full flexibility to innovate and evolve your solution.
+
+The sample application in this repository implements a custom solution.
 
 ### Recommended Reading
 
@@ -28,19 +41,19 @@ This repository contains an implementation of a simple micro frontends applicati
 - Gateway to the application.
 - Implements client-side routing.
 - Loads (lazy), mounts, and unmounts micro frontends based on application state.
-- Technologies: [Svelte](https://svelte.dev/), [Immer](https://immerjs.github.io/immer/), [Router5](https://router5.js.org/), [Axios](https://github.com/axios/axios), [Snowpack](https://www.snowpack.dev/)
+- Technologies: [Svelte](https://svelte.dev/), [Immer](https://immerjs.github.io/immer/), [Router5](https://router5.js.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Snowpack](https://www.snowpack.dev/)
 
 ### Browse Micro Frontend (`mf-browse`)
 
 - Implements browse experience.
 - Shows a list of selectable items.
-- Technologies: [React](https://reactjs.org/), [Axios](https://github.com/axios/axios), [Snowpack](https://www.snowpack.dev/)
+- Technologies: [React](https://reactjs.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Snowpack](https://www.snowpack.dev/)
 
 ### Detail Micro Frontend (`mf-detail`)
 
 - Implements detail experience.
 - Shows some details about the selected item.
-- Technologies: [Svelte](https://svelte.dev/), [Axios](https://github.com/axios/axios), [Snowpack](https://www.snowpack.dev/)
+- Technologies: [Svelte](https://svelte.dev/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Snowpack](https://www.snowpack.dev/)
 
 ### Backend (`api`)
 
