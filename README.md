@@ -6,31 +6,36 @@ This repository contains an implementation of a simple micro frontends applicati
 
 - Micro frontends is similar thing on the frontend side, as microservices are on the backend side.
 - Applications are composed of a set of well-defined, loosely coupled components.
-- We can identify micro frontends in our applications by applying principles, such as Domain Driven Desing (DDD).
-- Enables easier team setup, where each micro frontend is owned by a single cross-functional team.
+- We can identify micro frontends in our applications by applying principles, such as _Domain Driven Desing (DDD)_.
+- Each micro frontend is owned by a single cross-functional team.
+  - Easier scaling of teams and projects.
+  - Smaller scope enables faster onboarding of new teams and team members.
 - Teams can more freely pick their technology stack.
   - Prevents technology lock-in.
-  - Makes applications more future-proof, allowing teams to more easily experiment with and migrate to new technologies.
+  - Makes applications more future-proof by allowing teams to more easily experiment with and migrate to new technologies.
 - We get independent updates, so that if one part of the application changes, we only need to update the micro frontend(s) that implement the changed functionality.
 - Micro frontends patterns can be very effective when migrating an existing monolithic application to a more modular architecture.
-  - We can utilize Strangler Pattern to kill the monolith by eating it piece-by-piece, until there is nothing left from the original implementation.
-- There exist several approaches to implement micro frontends.
-  - Decisions frameworks like the one presented [here](https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513), can prove to be really useful in the early stages of a project.
+  - _Strangler Pattern_ to kill the monolith by eating it piece-by-piece, until there is nothing left from the original implementation.
 - Micro frontends is no silver bullet. It comes with its own challenges, such as operational and governance complexity, and possibly bigger payload sizes.
 - The important thing is to understand the trade-offs, and make an informed decision on whether to adopt micro frontends in your applications.
 
-### Existing Libraries and Frameworks
+### Decision Frameworks
 
-There exist several libraries and frameworks for implementing micro frontends:
+There exist several approaches to implement micro frontends.
+
+Decisions frameworks like the one presented [here](https://medium.com/@lucamezzalira/micro-frontends-decisions-framework-ebcd22256513), can prove to be really useful in the early stages of a project.
+
+### Libraries and Frameworks
+
+Micro frontends continue to gain in popularity, so there already exist several libraries and frameworks to implement them.
 
 - [single-spa](https://single-spa.js.org/)
 - [Frint](https://frint.js.org/)
 - [Luigi](https://luigi-project.io/)
-- ...
 
-Implementing a custom solution is also a perfectly viable option. It gives you the full flexibility to innovate and evolve your solution.
+**Custom solution** is also a perfectly viable option. It gives you the full flexibility to innovate and evolve your solution.
 
-The sample application in this repository implements a custom solution.
+_The sample application in this repository is implemented without any 3rd party micro frontend libraries._
 
 ### Recommended Reading
 
