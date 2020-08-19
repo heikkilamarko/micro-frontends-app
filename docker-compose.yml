@@ -1,26 +1,26 @@
 version: "3.7"
 
 services:
-  micro-frontends-app-shell:
+  app-shell:
     build: ./app-shell
-    image: micro-frontends-app-shell
+    image: app-shell
     ports:
       - 8000:80
 
-  micro-frontends-mf-browse:
+  mf-browse:
     build: ./mf-browse
-    image: micro-frontends-mf-browse
+    image: mf-browse
     ports:
       - 8001:80
 
-  micro-frontends-mf-detail:
+  mf-detail:
     build: ./mf-detail
-    image: micro-frontends-mf-detail
+    image: mf-detail
     ports:
       - 8002:80
 
-  micro-frontends-api:
+  api:
     build: ./api
-    image: micro-frontends-api
+    image: api
     ports:
       - 8003:80
