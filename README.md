@@ -2,7 +2,7 @@
 
 This repository contains an implementation of a simple micro frontends application written in Svelte and React.
 
-## Brief Introduction to Micro Frontends
+## A Brief Introduction to Micro Frontends
 
 - Micro frontends is similar thing on the frontend side, as microservices are on the backend side.
 - Applications are composed of a set of well-defined, loosely coupled components.
