@@ -1,6 +1,6 @@
 # Micro Frontends App
 
-This repository contains an implementation of a simple micro frontends application written in Svelte and React.
+This repository contains the source code of a simple micro frontends application written in Svelte and React.
 
 ## A Brief Introduction to Micro Frontends
 
