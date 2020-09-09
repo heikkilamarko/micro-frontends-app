@@ -7,16 +7,16 @@
     "lint": "prettier --check \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
-    "axios": "0.19.2",
+    "axios": "0.20.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-react": "1.8.4",
-    "@testing-library/jest-dom": "5.11.2",
-    "@testing-library/react": "10.4.8",
-    "jest": "26.2.2",
-    "prettier": "2.0.5",
-    "snowpack": "2.7.7"
+    "@snowpack/app-scripts-react": "1.10.0",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.0.2",
+    "jest": "26.4.2",
+    "prettier": "2.1.1",
+    "snowpack": "2.10.3"
   }
 }
