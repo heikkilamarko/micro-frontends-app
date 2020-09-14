@@ -6,13 +6,13 @@
   },
   "dependencies": {
     "axios": "0.20.0",
-    "svelte": "3.24.1"
+    "svelte": "3.25.0"
   },
   "devDependencies": {
     "@snowpack/app-scripts-svelte": "1.8.4",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/svelte": "3.0.0",
     "jest": "26.4.2",
-    "snowpack": "2.10.3"
+    "snowpack": "2.11.0"
   }
 }
