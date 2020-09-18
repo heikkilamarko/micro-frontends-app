@@ -1,4 +1,4 @@
 {
   "extends": "@snowpack/app-scripts-svelte",
-  "plugins": []
+  "plugins": [["@snowpack/plugin-optimize", {}]]
 }
