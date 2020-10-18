@@ -9,14 +9,14 @@
     "immer": "7.0.9",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1",
-    "svelte": "3.25.1"
+    "svelte": "3.29.0"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-svelte": "1.8.4",
-    "@snowpack/plugin-optimize": "0.2.1",
+    "@snowpack/app-scripts-svelte": "1.8.9",
+    "@snowpack/plugin-optimize": "0.2.5",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/svelte": "3.0.0",
-    "jest": "26.4.2",
-    "snowpack": "2.11.1"
+    "jest": "26.5.3",
+    "snowpack": "2.14.3"
   }
 }
