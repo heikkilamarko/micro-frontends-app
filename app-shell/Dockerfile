@@ -1,6 +1,6 @@
 # Build
 
-FROM node:14.15.0 AS build
+FROM node:14.15.1 AS build
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN npm run build
 
 # Runtime
 
-FROM node:14.15.0-alpine AS runtime
+FROM node:14.15.1-alpine AS runtime
 
 RUN npm i -g serve
 
