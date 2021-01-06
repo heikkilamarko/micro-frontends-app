@@ -5,7 +5,7 @@
     "test": "web-test-runner \"src/**/*.test.js\""
   },
   "dependencies": {
-    "axios": "0.21.0",
+    "axios": "0.21.1",
     "immer": "8.0.0",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1",
