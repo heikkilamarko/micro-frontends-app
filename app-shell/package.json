@@ -12,8 +12,7 @@
   },
   "devDependencies": {
     "@snowpack/plugin-dotenv": "2.0.5",
-    "@snowpack/plugin-optimize": "0.2.10",
-    "@snowpack/plugin-svelte": "3.4.1",
-    "snowpack": "2.18.5"
+    "@snowpack/plugin-svelte": "3.5.0",
+    "snowpack": "3.0.6"
   }
 }
