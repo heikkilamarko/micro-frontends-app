@@ -8,7 +8,7 @@
     "immer": "8.0.1",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1",
-    "svelte": "3.31.2"
+    "svelte": "3.32.3"
   },
   "devDependencies": {
     "@snowpack/plugin-dotenv": "2.0.5",
