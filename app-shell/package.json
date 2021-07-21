@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "axios": "0.21.1",
-    "immer": "9.0.5",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1"
   },

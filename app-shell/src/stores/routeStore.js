@@ -1,5 +1,4 @@
 import { writable } from "svelte/store";
-import produce from "immer";
 import createRouter from "router5";
 import browserPlugin from "router5-plugin-browser";
 import { noop } from "../utils";
@@ -11,28 +10,19 @@ const ROUTES = [
 ];
 
 function createStore(initialValue = { route: null, previousRoute: null }) {
-  const { subscribe, update } = writable(initialValue);
+  const { subscribe, set } = writable(initialValue);
 
   let router;
-  let dispose = noop;
 
-  function setState(fn) {
-    update(
-      produce((d) => {
-        fn(d);
-      })
-    );
-  }
+  let dispose = noop;
 
   function listen() {
     router = createRouter(ROUTES, { allowNotFound: true });
     router.usePlugin(browserPlugin());
-    dispose = router.subscribe(({ route, previousRoute }) => {
-      setState((d) => {
-        d.route = route;
-        d.previousRoute = previousRoute;
-      });
-    });
+    // @ts-ignore
+    dispose = router.subscribe(({ route, previousRoute }) =>
+      set({ route, previousRoute })
+    );
     router.start();
   }
 

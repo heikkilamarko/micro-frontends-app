@@ -52,7 +52,7 @@ _The sample application in this repository is implemented without any 3rd party 
 - Gateway to the application.
 - Implements the top menu and client-side routing.
 - Loads (lazy), mounts, and unmounts micro frontends based on application state.
-- Technologies: [Svelte](https://svelte.dev/), [Immer](https://immerjs.github.io/immer/), [Router5](https://router5.js.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
+- Technologies: [Svelte](https://svelte.dev/), [Router5](https://router5.js.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
 
 ### Browse Micro Frontend (`mf-browse`)
 
