@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import axios from "axios";
+  import ky from "ky";
   import { API_URL } from "../config";
   import Card from "./Card.svelte";
   import ErrorMessage from "./ErrorMessage.svelte";
@@ -13,7 +13,7 @@
 
   onMount(async () => {
     try {
-      const { data } = await axios.get(`${API_URL}/data.json`);
+      const data = await ky.get(`${API_URL}/data.json`).json();
 
       item = data?.items.find((t) => t.id === id);
 

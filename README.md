@@ -52,19 +52,19 @@ _The sample application in this repository is implemented without any 3rd party 
 - Gateway to the application.
 - Implements the top menu and client-side routing.
 - Loads (lazy), mounts, and unmounts micro frontends based on application state.
-- Technologies: [Svelte](https://svelte.dev/), [Router5](https://router5.js.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
+- Technologies: [Svelte](https://svelte.dev/), [Router5](https://router5.js.org/), [Ky](https://github.com/sindresorhus/ky), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
 
 ### Browse Micro Frontend (`mf-browse`)
 
 - Implements browse experience.
 - Shows a list of selectable items.
-- Technologies: [React](https://reactjs.org/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
+- Technologies: [React](https://reactjs.org/), [Ky](https://github.com/sindresorhus/ky), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
 
 ### Detail Micro Frontend (`mf-detail`)
 
 - Implements detail experience.
 - Shows some details about the selected item.
-- Technologies: [Svelte](https://svelte.dev/), [Axios](https://github.com/axios/axios), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
+- Technologies: [Svelte](https://svelte.dev/), [Ky](https://github.com/sindresorhus/ky), [Bootstrap](https://getbootstrap.com/), [Vite](https://vitejs.dev/)
 
 ### Backend (`api`)
 

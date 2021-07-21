@@ -1,18 +1,18 @@
-import React from 'react';
-import { API_URL } from '../config';
-import './Card.css';
+import React from "react";
+import { API_URL } from "../config";
+import "./Card.css";
 
 function Card({ data }) {
   function handleClick(event) {
     event.preventDefault();
     window.dispatchEvent(
-      new CustomEvent('APP.EVENT', {
+      new CustomEvent("APP.EVENT", {
         detail: {
-          type: 'APP_EVENT_NAVIGATE',
-          to: 'detail',
+          type: "APP_EVENT_NAVIGATE",
+          to: "detail",
           params: { id: data.id },
         },
-      }),
+      })
     );
   }
 

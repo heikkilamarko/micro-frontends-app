@@ -1,4 +1,4 @@
-import axios from "axios";
+import ky from "ky";
 
 const cache = {};
 
@@ -6,9 +6,9 @@ export async function loadAssets(host) {
   try {
     if (cache[host]) return;
 
-    const { data } = await axios.get(`${host}/manifest.json`);
+    const manifest = await ky.get(`${host}/manifest.json`).json();
 
-    const values = [data["index.html"].file, ...data["index.html"].css];
+    const values = [manifest["index.html"].file, ...manifest["index.html"].css];
 
     const scripts = values
       .filter((i) => i.endsWith(".js"))

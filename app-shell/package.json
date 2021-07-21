@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "axios": "0.21.1",
+    "ky": "0.28.5",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1"
   },

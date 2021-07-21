@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { APP_ID } from './config';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { APP_ID } from "./config";
+import App from "./components/App";
 
 window[APP_ID] = {
   mount: (container) => {
@@ -11,7 +11,7 @@ window[APP_ID] = {
       <React.StrictMode>
         <App />
       </React.StrictMode>,
-      container,
+      container
     );
 
     return () => {
@@ -21,8 +21,8 @@ window[APP_ID] = {
   },
 };
 
-if (import.meta.env.MODE === 'development') {
+if (import.meta.env.MODE === "development") {
   window.onload = () => {
-    window[APP_ID].mount(document.getElementById('root'));
+    window[APP_ID].mount(document.getElementById("root"));
   };
 }

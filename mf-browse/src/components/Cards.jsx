@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { API_URL } from '../config';
-import Card from './Card';
-import ErrorMessage from './ErrorMessage';
+import React, { useState, useEffect } from "react";
+import ky from "ky";
+import { API_URL } from "../config";
+import Card from "./Card";
+import ErrorMessage from "./ErrorMessage";
 
 function Cards() {
   const [items, setItems] = useState([]);
@@ -13,7 +13,7 @@ function Cards() {
 
     async function run() {
       try {
-        const { data } = await axios.get(`${API_URL}/data.json`);
+        const data = await ky.get(`${API_URL}/data.json`).json();
         if (!cancel) {
           setItems(data.items || []);
         }
