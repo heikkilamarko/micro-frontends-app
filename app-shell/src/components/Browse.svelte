@@ -6,4 +6,5 @@
 <MicroFrontend
   appId={MF_BROWSE_ID}
   appHost={MF_BROWSE_URL}
-  tag="tag-mf-browse" />
+  tag="tag-mf-browse"
+/>

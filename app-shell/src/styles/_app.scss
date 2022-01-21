@@ -1,3 +1,12 @@
+body {
+  background-color: rgba($primary, 0.05);
+}
+
+/* TODO: Temporary workaround for https://github.com/twbs/icons/issues/921 */
+svg.bi {
+  vertical-align: -0.125em;
+}
+
 body.show-tags.tag-app-shell,
 body.show-tags .tag-app-shell,
 body.show-tags.tag-mf-detail,

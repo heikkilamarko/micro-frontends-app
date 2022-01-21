@@ -8,4 +8,5 @@
   appId={MF_DETAIL_ID}
   appHost={MF_DETAIL_URL}
   appProps={$routeStore.route.params}
-  tag="tag-mf-detail" />
+  tag="tag-mf-detail"
+/>

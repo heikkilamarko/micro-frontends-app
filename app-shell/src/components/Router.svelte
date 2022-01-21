@@ -7,9 +7,9 @@
   $: route = $routeStore.route.name;
 </script>
 
-{#if route === 'browse'}
+{#if route === "browse"}
   <Browse />
-{:else if route === 'detail'}
+{:else if route === "detail"}
   <Detail />
 {:else}
   <ErrorMessage title="404" text="Not Found" showGoHome={true} />

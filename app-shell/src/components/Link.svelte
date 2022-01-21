@@ -1,5 +1,6 @@
 <script>
-  export let clazz;
+  let clazz;
+  export { clazz as class };
   export let href;
 </script>
 
