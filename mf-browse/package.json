@@ -6,12 +6,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "ky": "0.28.7",
+    "ky": "0.29.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react-refresh": "1.3.6",
-    "vite": "2.7.13"
+    "vite": "2.8.4"
   }
 }

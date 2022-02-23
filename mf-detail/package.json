@@ -7,11 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "ky": "0.28.7"
+    "ky": "0.29.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "1.0.0-next.34",
-    "svelte": "3.46.2",
-    "vite": "2.7.13"
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.37",
+    "svelte": "3.46.4",
+    "vite": "2.8.4"
   }
 }
