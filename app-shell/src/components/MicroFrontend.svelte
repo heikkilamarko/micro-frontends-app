@@ -6,7 +6,7 @@
   export let appId;
   export let appHost;
   export let appProps = {};
-  export let tag;
+  export let appInfo = {};
 
   let target;
   let error;
@@ -28,5 +28,5 @@
 {#if error}
   <ErrorMessage text={error.message} />
 {:else}
-  <main class={`container ${tag}`} bind:this={target} />
+  <main class="container" {...appInfo} bind:this={target} />
 {/if}

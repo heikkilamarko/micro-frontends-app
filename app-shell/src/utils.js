@@ -78,8 +78,8 @@ export function mountApp(appId, target, props) {
 }
 
 export function handleWindowKeydown(event) {
-  if (event.key === "t") {
-    document.body.classList.toggle("show-tags");
+  if (event.key === "i") {
+    document.body.classList.toggle("show-info");
   }
 }
 

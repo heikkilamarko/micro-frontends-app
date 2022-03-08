@@ -7,54 +7,38 @@ svg.bi {
   vertical-align: -0.125em;
 }
 
-body.show-tags.tag-app-shell,
-body.show-tags .tag-app-shell,
-body.show-tags.tag-mf-detail,
-body.show-tags .tag-mf-detail {
-  border: 3px solid #ff3e00;
-  position: relative;
-}
+body.show-info {
+  --app-color-svelte: #ff3e00;
+  --app-color-react: #61dafb;
 
-body.show-tags.tag-app-shell::before,
-body.show-tags .tag-app-shell::before,
-body.show-tags.tag-mf-detail::before,
-body.show-tags .tag-mf-detail::before {
-  content: "svelte";
-  background-color: #ff3e00;
-  top: 0;
-  left: 0;
-  color: white;
-  padding: 0 0.5rem;
-  position: absolute;
-  z-index: 1;
-  font-weight: 700;
-}
+  [data-info] {
+    position: relative;
+  }
 
-body.show-tags.tag-app-shell::before,
-body.show-tags .tag-app-shell::before {
-  content: "app-shell (svelte)";
-}
+  [data-info="svelte"] {
+    border: 3px solid var(--app-color-svelte);
+  }
 
-body.show-tags.tag-mf-detail::before,
-body.show-tags .tag-mf-detail::before {
-  content: "mf-detail (svelte)";
-}
+  [data-info="react"] {
+    border: 3px solid var(--app-color-react);
+  }
 
-body.show-tags.tag-mf-browse,
-body.show-tags .tag-mf-browse {
-  border: 3px solid #61dafb;
-  position: relative;
-}
+  [data-info]::before {
+    content: attr(data-info-content);
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 0 0.5rem;
+    position: absolute;
+    z-index: 1;
+    font-weight: 700;
+  }
 
-body.show-tags.tag-mf-browse::before,
-body.show-tags .tag-mf-browse::before {
-  content: "mf-browse (react)";
-  background-color: #61dafb;
-  top: 0;
-  left: 0;
-  color: white;
-  padding: 0 0.5rem;
-  position: absolute;
-  z-index: 1;
-  font-weight: 700;
+  [data-info="svelte"]::before {
+    background-color: var(--app-color-svelte);
+  }
+
+  [data-info="react"]::before {
+    background-color: var(--app-color-react);
+  }
 }
