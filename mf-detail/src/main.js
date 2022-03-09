@@ -20,7 +20,7 @@ window[APP_ID] = {
   },
 };
 
-if (import.meta.env.MODE === "development") {
+if (import.meta.env.DEV) {
   window.onload = () => {
     window[APP_ID].mount(document.body, {
       id: "svelte",

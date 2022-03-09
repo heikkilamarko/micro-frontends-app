@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { APP_ID } from "./config";
 import App from "./components/App";
 
@@ -7,21 +7,22 @@ window[APP_ID] = {
   mount: (container) => {
     console.log(`MOUNT: ${APP_ID}`);
 
-    ReactDOM.render(
+    const root = createRoot(container);
+
+    root.render(
       <React.StrictMode>
         <App />
-      </React.StrictMode>,
-      container
+      </React.StrictMode>
     );
 
     return () => {
       console.log(`UNMOUNT: ${APP_ID}`);
-      ReactDOM.unmountComponentAtNode(container);
+      root.unmount();
     };
   },
 };
 
-if (import.meta.env.MODE === "development") {
+if (import.meta.env.DEV) {
   window.onload = () => {
     window[APP_ID].mount(document.getElementById("root"));
   };
