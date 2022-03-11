@@ -16,7 +16,7 @@
   onMount(async () => {
     try {
       await loadAssets(appUrl);
-      unmountApp = mountApp(appId, target, appProps);
+      unmountApp = mountApp(appId, appProps, target);
     } catch (err) {
       error = err;
     }

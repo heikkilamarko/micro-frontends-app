@@ -69,10 +69,10 @@ function isAlreadyLoaded(id) {
   return !!document.getElementById(id);
 }
 
-export function mountApp(appId, target, props) {
+export function mountApp(appId, appProps, target) {
   const app = window[appId];
   if (app && typeof app.mount === "function") {
-    return app.mount(target, props);
+    return app.mount(target, appProps);
   }
   throw new Error(`micro frontend with id '${appId}' was not found`);
 }
