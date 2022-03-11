@@ -8,4 +8,4 @@
   };
 </script>
 
-<MicroFrontend appId={MF_BROWSE_ID} appHost={MF_BROWSE_URL} {appInfo} />
+<MicroFrontend appId={MF_BROWSE_ID} appUrl={MF_BROWSE_URL} {appInfo} />

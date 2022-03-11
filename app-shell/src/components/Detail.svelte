@@ -11,7 +11,7 @@
 
 <MicroFrontend
   appId={MF_DETAIL_ID}
-  appHost={MF_DETAIL_URL}
+  appUrl={MF_DETAIL_URL}
   appProps={$routeStore.route.params}
   {appInfo}
 />

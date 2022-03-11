@@ -4,7 +4,7 @@
   import ErrorMessage from "./ErrorMessage.svelte";
 
   export let appId;
-  export let appHost;
+  export let appUrl;
   export let appProps = {};
   export let appInfo = {};
 
@@ -15,7 +15,7 @@
 
   onMount(async () => {
     try {
-      await loadAssets(appHost);
+      await loadAssets(appUrl);
       unmountApp = mountApp(appId, target, appProps);
     } catch (err) {
       error = err;

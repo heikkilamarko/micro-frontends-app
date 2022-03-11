@@ -2,29 +2,29 @@ import ky from "ky";
 
 const cache = {};
 
-export async function loadAssets(host) {
+export async function loadAssets(url) {
   try {
-    if (cache[host]) return;
+    if (cache[url]) return;
 
-    const manifest = await ky.get(`${host}/manifest.json`).json();
+    const manifest = await ky.get(`${url}/manifest.json`).json();
 
     const values = [manifest["index.html"].file, ...manifest["index.html"].css];
 
     const scripts = values
       .filter((i) => i.endsWith(".js"))
-      .map((i) => `${host}/${i}`)
+      .map((i) => `${url}/${i}`)
       .filter((i) => !isAlreadyLoaded(i));
 
     const links = values
       .filter((i) => i.endsWith(".css"))
-      .map((i) => `${host}/${i}`)
+      .map((i) => `${url}/${i}`)
       .filter((i) => !isAlreadyLoaded(i));
 
     await loadScriptsAndLinks(scripts, links);
 
-    cache[host] = true;
+    cache[url] = true;
   } catch (error) {
-    console.log(`failed to load assets from '${host}'`);
+    console.log(`failed to load assets from '${url}'`);
     throw error;
   }
 }
