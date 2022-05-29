@@ -10,7 +10,7 @@
     "ky": "0.30.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "1.0.0-next.44",
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.45",
     "svelte": "3.48.0",
     "vite": "2.9.9"
   }
