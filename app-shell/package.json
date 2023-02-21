@@ -4,18 +4,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "5.2.3",
-    "ky": "0.32.2",
+    "ky": "0.33.2",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "1.4.0",
-    "sass": "1.56.1",
-    "svelte": "3.53.1",
-    "vite": "3.2.4"
+    "@sveltejs/vite-plugin-svelte": "2.0.2",
+    "sass": "1.58.3",
+    "svelte": "3.55.1",
+    "vite": "4.1.4"
   }
 }
