@@ -1,0 +1,28 @@
+{
+	admin off
+	auto_https off
+	skip_install_trust
+}
+
+:80 {
+	encode gzip
+	tls internal
+
+	header -Server
+
+	handle_path /api/* {
+		reverse_proxy http://api
+	}
+
+	handle_path /browse/* {
+		reverse_proxy http://mf-browse
+	}
+
+	handle_path /detail/* {
+		reverse_proxy http://mf-detail
+	}
+
+	handle {
+		reverse_proxy http://app-shell
+	}
+}

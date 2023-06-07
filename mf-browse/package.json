@@ -6,12 +6,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "ky": "0.33.2",
+    "ky": "0.33.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "3.1.0",
-    "vite": "4.1.4"
+    "@vitejs/plugin-react": "4.0.0",
+    "vite": "4.3.9"
   }
 }

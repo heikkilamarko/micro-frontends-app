@@ -1,0 +1,25 @@
+{
+	admin off
+	auto_https off
+	skip_install_trust
+}
+
+:80 {
+	encode gzip
+	tls internal
+
+	header -Server
+
+	handle {
+		root * /usr/share/app
+
+		header -Server
+		header /assets/* Cache-Control "max-age=31536000"
+
+		try_files {path} /index.html
+
+		file_server {
+			precompressed br gzip
+		}
+	}
+}
