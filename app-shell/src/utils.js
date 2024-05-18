@@ -6,7 +6,7 @@ export async function loadAssets(url) {
   try {
     if (cache[url]) return;
 
-    const manifest = await ky.get(`${url}/manifest.json`).json();
+    const manifest = await ky.get(`${url}/.vite/manifest.json`).json();
 
     const values = [manifest["index.html"].file, ...manifest["index.html"].css];
 
