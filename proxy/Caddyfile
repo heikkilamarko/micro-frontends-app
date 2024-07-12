@@ -4,25 +4,24 @@
 	skip_install_trust
 }
 
-:80 {
+:8080 {
 	encode gzip
-	tls internal
 
 	header -Server
 
 	handle_path /api/* {
-		reverse_proxy http://api
+		reverse_proxy http://api:8080
 	}
 
 	handle_path /browse/* {
-		reverse_proxy http://mf-browse
+		reverse_proxy http://mf-browse:8080
 	}
 
 	handle_path /detail/* {
-		reverse_proxy http://mf-detail
+		reverse_proxy http://mf-detail:8080
 	}
 
 	handle {
-		reverse_proxy http://app-shell
+		reverse_proxy http://app-shell:8080
 	}
 }

@@ -3,7 +3,7 @@ services:
     build: ./proxy
     image: proxy
     ports:
-      - 8000:80
+      - 8000:8080
     networks:
       - micro-frontends-app
 

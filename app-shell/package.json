@@ -8,14 +8,14 @@
   },
   "dependencies": {
     "bootstrap": "5.3.3",
-    "ky": "1.2.4",
+    "ky": "1.4.0",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "3.1.0",
-    "sass": "1.77.2",
-    "svelte": "4.2.17",
-    "vite": "5.2.11"
+    "@sveltejs/vite-plugin-svelte": "3.1.1",
+    "sass": "1.77.8",
+    "svelte": "4.2.18",
+    "vite": "5.3.3"
   }
 }
