@@ -81,6 +81,9 @@ Application shell and the micro frontends can communicate in a loosely coupled w
 ## Building and Running the App
 
 ```bash
-> docker compose up --build -d
-> open http://localhost:8000
+docker compose up --build -d
+```
+
+```bash
+open http://localhost:8000
 ```
