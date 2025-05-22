@@ -1,8 +1,5 @@
-import React from "react";
 import Cards from "./Cards";
 
-function App() {
+export default function App() {
   return <Cards />;
 }
-
-export default App;

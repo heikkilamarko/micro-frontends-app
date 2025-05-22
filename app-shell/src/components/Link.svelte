@@ -4,6 +4,6 @@
   export let href;
 </script>
 
-<a class={clazz} on:click|preventDefault {href}>
+<a class={clazz} {href} data-link>
   <slot />
 </a>

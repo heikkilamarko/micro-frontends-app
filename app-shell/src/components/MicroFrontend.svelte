@@ -28,5 +28,5 @@
 {#if error}
   <ErrorMessage text={error.message} />
 {:else}
-  <main class="container" {...appInfo} bind:this={target} />
+  <main class="container" {...appInfo} bind:this={target}></main>
 {/if}

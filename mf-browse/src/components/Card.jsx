@@ -1,27 +1,13 @@
-import React from "react";
 import { API_URL } from "../config";
 import "./Card.css";
 
-function Card({ data }) {
-  function handleClick(event) {
-    event.preventDefault();
-    window.dispatchEvent(
-      new CustomEvent("APP.EVENT", {
-        detail: {
-          type: "APP_EVENT_NAVIGATE",
-          to: "detail",
-          params: { id: data.id },
-        },
-      })
-    );
-  }
-
+export default function Card({ data }) {
   return (
     <div className="col-6 col-md-4 col-lg-3 p-2">
       <a
         className="card text-center card-custom"
-        onClick={handleClick}
         href={`/items/${data.id}`}
+        data-link
       >
         <div className="card-body">
           <h4 className="card-title">{data.name}</h4>
@@ -36,5 +22,3 @@ function Card({ data }) {
     </div>
   );
 }
-
-export default Card;

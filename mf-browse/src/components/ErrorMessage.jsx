@@ -1,7 +1,6 @@
-import React from "react";
 import "./ErrorMessage.css";
 
-function Error({ title = "Error", text }) {
+export default function Error({ title = "Error", text }) {
   return (
     <section className="d-flex align-items-center justify-content-center p-4 error-message">
       <div className="card text-center text-danger">
@@ -13,5 +12,3 @@ function Error({ title = "Error", text }) {
     </section>
   );
 }
-
-export default Error;

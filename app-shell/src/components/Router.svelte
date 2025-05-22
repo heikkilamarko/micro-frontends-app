@@ -4,7 +4,7 @@
   import Detail from "./Detail.svelte";
   import ErrorMessage from "./ErrorMessage.svelte";
 
-  $: route = $routeStore.route.name;
+  $: route = $routeStore?.route?.name;
 </script>
 
 {#if route === "browse"}

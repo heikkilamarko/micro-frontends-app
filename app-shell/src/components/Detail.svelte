@@ -9,9 +9,11 @@
   };
 </script>
 
-<MicroFrontend
-  appId={MF_DETAIL_ID}
-  appUrl={MF_DETAIL_URL}
-  appProps={$routeStore.route.params}
-  {appInfo}
-/>
+{#key $routeStore.route.params.id}
+  <MicroFrontend
+    appId={MF_DETAIL_ID}
+    appUrl={MF_DETAIL_URL}
+    appProps={$routeStore.route.params}
+    {appInfo}
+  />
+{/key}

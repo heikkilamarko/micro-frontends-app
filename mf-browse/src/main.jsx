@@ -5,7 +5,7 @@ import App from "./components/App";
 
 window[APP_ID] = {
   mount: (container) => {
-    console.log(`MOUNT: ${APP_ID}`);
+    console.debug(`MOUNT: ${APP_ID}`);
 
     const root = createRoot(container);
 
@@ -16,7 +16,7 @@ window[APP_ID] = {
     );
 
     return () => {
-      console.log(`UNMOUNT: ${APP_ID}`);
+      console.debug(`UNMOUNT: ${APP_ID}`);
       root.unmount();
     };
   },

@@ -24,7 +24,7 @@ export async function loadAssets(url) {
 
     cache[url] = true;
   } catch (error) {
-    console.log(`failed to load assets from '${url}'`);
+    console.error(`failed to load assets from '${url}'`);
     throw error;
   }
 }

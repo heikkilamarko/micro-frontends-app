@@ -1,13 +1,7 @@
 <script>
-  import routeStore from "../stores/routeStore";
-
   export let title = "Error";
   export let text;
   export let showGoHome = false;
-
-  function navigateHome() {
-    routeStore.navigate("browse");
-  }
 </script>
 
 <main class="d-flex align-items-center justify-content-center p-4">
@@ -18,13 +12,13 @@
         <p class="card-text">{text}</p>
       {/if}
       {#if showGoHome}
-        <button
-          type="button"
+        <a
           class="btn btn-primary rounded-pill px-5 btn-lg mb-3"
-          on:click={navigateHome}
+          href="/"
+          data-link
         >
           Go Home
-        </button>
+        </a>
       {/if}
     </div>
   </div>

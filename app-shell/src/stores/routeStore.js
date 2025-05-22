@@ -1,48 +1,80 @@
 import { writable } from "svelte/store";
-import createRouter from "router5";
-import browserPlugin from "router5-plugin-browser";
-import { noop } from "../utils";
+import UniversalRouter from "universal-router";
+import generateUrls from "universal-router/generateUrls";
 
 const ROUTES = [
-  { name: "browse", path: "/" },
-  { name: "detail", path: "/items/:id" },
-  { name: "notfound", path: "/notfound" },
+  {
+    name: "browse",
+    path: "/",
+    action: ({ params }) => ({
+      name: "browse",
+      params,
+    }),
+  },
+  {
+    name: "detail",
+    path: "/items/:id",
+    action: ({ params }) => ({
+      name: "detail",
+      params,
+    }),
+  },
+  {
+    path: "/*all",
+    action: ({ params }) => ({
+      name: "NOT_FOUND",
+      params,
+    }),
+  },
 ];
 
-function createStore(initialValue = { route: null, previousRoute: null }) {
-  const { subscribe, set } = writable(initialValue);
+function createStore() {
+  const { subscribe, set } = writable({});
 
   let router;
-
-  let dispose = noop;
+  let urls;
 
   function listen() {
-    router = createRouter(ROUTES, { allowNotFound: true });
-    router.usePlugin(browserPlugin());
-    // @ts-ignore
-    dispose = router.subscribe(({ route, previousRoute }) =>
-      set({ route, previousRoute })
-    );
-    router.start();
+    router = new UniversalRouter(ROUTES);
+    urls = generateUrls(router);
+
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest("a[data-link]");
+      if (!link) return;
+      e.preventDefault();
+      const url = link.getAttribute("href");
+      history.pushState(null, "", url);
+      render(url);
+    });
+
+    window.addEventListener("popstate", () => render(location.pathname));
+
+    render(location.pathname);
   }
 
-  function unlisten() {
-    dispose();
-    dispose = noop;
-  }
-
-  function navigate(routeName, routeParams, options, done) {
-    router.navigate(routeName, routeParams, options, done);
+  function navigate(route, params) {
+    const url = urls(route, params);
+    history.pushState(null, "", url);
+    render(url);
   }
 
   function navigateBack() {
     history.back();
   }
 
+  async function render(location) {
+    console.debug(location);
+    try {
+      const route = await router.resolve({ pathname: location });
+      set({ route });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return {
     subscribe,
     listen,
-    unlisten,
     navigate,
     navigateBack,
   };

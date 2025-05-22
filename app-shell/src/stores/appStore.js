@@ -15,7 +15,7 @@ function createStore() {
         routeStore.navigate(detail.to, detail.params);
         break;
       default:
-        console.log(`Unknown app event received: '${detail.type}'`);
+        console.debug(`Unknown app event received: '${detail.type}'`);
     }
   }
 

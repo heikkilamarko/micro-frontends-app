@@ -4,7 +4,7 @@ import { APP_ID } from "./config";
 
 window[APP_ID] = {
   mount: (container, props) => {
-    console.log(`MOUNT: ${APP_ID}`);
+    console.debug(`MOUNT: ${APP_ID}`);
 
     let app = mount(App, {
       target: container,
@@ -13,7 +13,7 @@ window[APP_ID] = {
 
     return () => {
       if (app) {
-        console.log(`UNMOUNT: ${APP_ID}`);
+        console.debug(`UNMOUNT: ${APP_ID}`);
         unmount(app);
         app = null;
       }
