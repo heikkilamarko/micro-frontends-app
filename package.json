@@ -1,0 +1,10 @@
+{
+	"name": "micro-frontends-app",
+	"scripts": {
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"prettier": "3.5.3",
+		"prettier-plugin-svelte": "3.4.0"
+	}
+}

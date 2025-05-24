@@ -1,17 +1,17 @@
 {
-  "name": "mf-detail",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "ky": "1.8.1"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "5.0.3",
-    "svelte": "5.33.1",
-    "vite": "6.3.5"
-  }
+	"name": "mf-detail",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"ky": "1.8.1"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "5.0.3",
+		"svelte": "5.33.1",
+		"vite": "6.3.5"
+	}
 }

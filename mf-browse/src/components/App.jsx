@@ -1,5 +1,5 @@
-import Cards from "./Cards";
+import Cards from './Cards';
 
 export default function App() {
-  return <Cards />;
+	return <Cards />;
 }

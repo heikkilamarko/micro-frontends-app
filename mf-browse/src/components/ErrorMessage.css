@@ -1,13 +1,13 @@
 .error-message .card {
-  width: 30rem;
+	width: 30rem;
 }
 
 .error-message .card-title {
-  font-size: 8rem;
-  font-weight: 200;
+	font-size: 8rem;
+	font-weight: 200;
 }
 
 .error-message p {
-  font-size: 2rem;
-  font-weight: 200;
+	font-size: 2rem;
+	font-weight: 200;
 }

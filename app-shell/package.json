@@ -1,20 +1,20 @@
 {
-  "name": "app-shell",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "bootstrap": "5.3.6",
-    "ky": "1.8.1",
-    "universal-router": "10.0.0"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "5.0.3",
-    "sass": "1.89.0",
-    "svelte": "5.33.1",
-    "vite": "6.3.5"
-  }
+	"name": "app-shell",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"bootstrap": "5.3.6",
+		"ky": "1.8.1",
+		"universal-router": "10.0.0"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "5.0.3",
+		"sass": "1.89.0",
+		"svelte": "5.33.1",
+		"vite": "6.3.5"
+	}
 }

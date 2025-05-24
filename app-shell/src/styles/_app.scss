@@ -1,44 +1,44 @@
 body {
-  background-color: rgba($primary, 0.05);
+	background-color: rgba($primary, 0.05);
 }
 
 /* TODO: Temporary workaround for https://github.com/twbs/icons/issues/913 */
 svg.bi {
-  vertical-align: -0.125em;
+	vertical-align: -0.125em;
 }
 
 body.show-info {
-  --app-color-svelte: #ff3e00;
-  --app-color-react: #61dafb;
+	--app-color-svelte: #ff3e00;
+	--app-color-react: #61dafb;
 
-  [data-info] {
-    position: relative;
-  }
+	[data-info] {
+		position: relative;
+	}
 
-  [data-info="svelte"] {
-    border: 3px solid var(--app-color-svelte);
-  }
+	[data-info='svelte'] {
+		border: 3px solid var(--app-color-svelte);
+	}
 
-  [data-info="react"] {
-    border: 3px solid var(--app-color-react);
-  }
+	[data-info='react'] {
+		border: 3px solid var(--app-color-react);
+	}
 
-  [data-info]::before {
-    content: attr(data-info-content);
-    top: 0;
-    left: 0;
-    color: white;
-    padding: 0 0.5rem;
-    position: absolute;
-    z-index: 1;
-    font-weight: 700;
-  }
+	[data-info]::before {
+		content: attr(data-info-content);
+		top: 0;
+		left: 0;
+		color: white;
+		padding: 0 0.5rem;
+		position: absolute;
+		z-index: 1;
+		font-weight: 700;
+	}
 
-  [data-info="svelte"]::before {
-    background-color: var(--app-color-svelte);
-  }
+	[data-info='svelte']::before {
+		background-color: var(--app-color-svelte);
+	}
 
-  [data-info="react"]::before {
-    background-color: var(--app-color-react);
-  }
+	[data-info='react']::before {
+		background-color: var(--app-color-react);
+	}
 }
