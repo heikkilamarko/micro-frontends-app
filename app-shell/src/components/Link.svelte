@@ -1,9 +1,7 @@
 <script>
-  let clazz;
-  export { clazz as class };
-  export let href;
+  let { class: clazz, href, children } = $props();
 </script>
 
 <a class={clazz} {href} data-link>
-  <slot />
+  {@render children?.()}
 </a>

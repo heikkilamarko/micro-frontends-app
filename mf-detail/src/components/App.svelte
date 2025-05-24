@@ -1,15 +1,15 @@
 <script>
   import { onMount } from "svelte";
   import ky from "ky";
-  import { API_URL } from "../config";
+  import { API_URL } from "../config.js";
   import Card from "./Card.svelte";
   import ErrorMessage from "./ErrorMessage.svelte";
 
-  export let id;
+  let { id } = $props();
 
-  let item;
-  let notFound = false;
-  let error;
+  let item = $state();
+  let notFound = $state(false);
+  let error = $state();
 
   onMount(async () => {
     try {

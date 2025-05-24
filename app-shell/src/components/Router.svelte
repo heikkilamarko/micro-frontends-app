@@ -1,10 +1,10 @@
 <script>
-  import routeStore from "../stores/routeStore";
+  import { stores } from "../stores/stores.js";
   import Browse from "./Browse.svelte";
   import Detail from "./Detail.svelte";
   import ErrorMessage from "./ErrorMessage.svelte";
 
-  $: route = $routeStore?.route?.name;
+  let route = $derived(stores.routeStore?.route?.name);
 </script>
 
 {#if route === "browse"}

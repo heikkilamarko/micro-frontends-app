@@ -1,15 +1,12 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { loadAssets, mountApp, noop } from "../utils";
+  import { loadAssets, mountApp, noop } from "../utils.js";
   import ErrorMessage from "./ErrorMessage.svelte";
 
-  export let appId;
-  export let appUrl;
-  export let appProps = {};
-  export let appInfo = {};
+  let { appId, appUrl, appProps = {}, appInfo = {} } = $props();
 
-  let target;
-  let error;
+  let target = $state();
+  let error = $state();
 
   let unmountApp = noop;
 

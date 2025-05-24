@@ -1,5 +1,5 @@
 <script>
-  import { MF_BROWSE_ID, MF_BROWSE_URL } from "../config";
+  import { MF_BROWSE_ID, MF_BROWSE_URL } from "../config.js";
   import MicroFrontend from "./MicroFrontend.svelte";
 
   const appInfo = {

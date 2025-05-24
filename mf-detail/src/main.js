@@ -1,6 +1,6 @@
 import { mount, unmount } from "svelte";
 import App from "./components/App.svelte";
-import { APP_ID } from "./config";
+import { APP_ID } from "./config.js";
 
 window[APP_ID] = {
   mount: (container, props) => {

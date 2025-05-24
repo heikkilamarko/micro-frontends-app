@@ -1,7 +1,5 @@
 <script>
-  export let title = "Error";
-  export let text;
-  export let showGoHome = false;
+  let { title = "Error", text, showGoHome = false } = $props();
 </script>
 
 <main class="d-flex align-items-center justify-content-center p-4">
