@@ -1,4 +1,4 @@
-FROM node:lts
-COPY . /app
-RUN npm i -g serve
-ENTRYPOINT ["serve", "-s", "-p", "8080", "--cors", "app"]
+FROM caddy:2-alpine
+COPY ./Caddyfile /etc/caddy/
+COPY ./data.json /usr/share/app/
+COPY ./images /usr/share/app/images

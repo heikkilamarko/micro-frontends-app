@@ -12,9 +12,9 @@
 		"universal-router": "10.0.0"
 	},
 	"devDependencies": {
-		"@sveltejs/vite-plugin-svelte": "5.0.3",
-		"sass": "1.89.0",
-		"svelte": "5.33.1",
+		"@sveltejs/vite-plugin-svelte": "5.1.0",
+		"sass": "1.89.2",
+		"svelte": "5.34.2",
 		"vite": "6.3.5"
 	}
 }

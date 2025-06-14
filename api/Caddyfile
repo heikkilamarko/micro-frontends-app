@@ -1,0 +1,11 @@
+{
+	admin off
+	auto_https off
+	skip_install_trust
+}
+
+:8080 {
+	header -Server
+	root * /usr/share/app
+	file_server
+}
